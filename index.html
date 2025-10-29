@@ -6,11 +6,15 @@
     <title>presentation about presentations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.cdnfonts.com/css/geist-mono" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       :root {
-        --text: #222;
-        --bg: #fff;
+        --text: #fff;
+        --bg: #222;
       }
 
       * {
@@ -27,6 +31,9 @@
 
       body {
         font-family: "Geist Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: 350;
+        font-style: normal;
         color: var(--text);
         overflow-x: hidden;
         font-size: 20px;
@@ -48,19 +55,27 @@
       }
 
       .highlight {
-        font-size: 8cqw;
+        font-size: 7.5cqw;
         line-height: 0.9;
-        letter-spacing: -0.07em;
+        letter-spacing: -0.05em;
         transform: skewY(4deg);
         padding: 0.5em 1em 0 1em;
         margin: 0 -1.25em;
       }
 
       .title {
-        font-size: 14.5cqw;
+        font-size: 14cqw;
         line-height: 0.75;
-        letter-spacing: -0.07em;
+        letter-spacing: -0.05em;
         transform: skewY(-9deg);
+      }
+
+      .hand {
+        font-family: "Nanum Pen Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        line-height: 1.5rem;
       }
 
       .block {
@@ -87,6 +102,18 @@
       .fill {
         flex: 1;
       }
+
+      /* Global bold font weight */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      b,
+      strong {
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
@@ -100,11 +127,11 @@
 
     <div class="slide">
       <p>Start by asking a question...</p>
-      <h1>What is one thing I want my audience to remember?</h1>
+      <h1>What is one thing I want my audience to&nbsp;remember?</h1>
     </div>
 
     <div class="slide">
-      <p>What is one thing I want you to remember?</p>
+      <p>What is one thing I want you to remember today?</p>
       <h1 class="highlight">Build presentations like you build products</h1>
     </div>
 
@@ -136,20 +163,114 @@
       <div class="block fill">
         <h1>1 Context</h1>
         <div class="space-between">
-          <p>•• &nbsp;Who is my customer?</p>
-          <p>A tired engineer at the end of working Thursday</p>
-        </div>
-        <div class="space-between">
-          <p>•• &nbsp;What do I sell?</p>
-          <p>A mental model to simplify presentation prep</p>
-        </div>
-        <div class="space-between">
-          <p>•• &nbsp;What limitations exist?</p>
-          <p>10-minute limit, online/offline mixed, etc.</p>
+          <p>·· &nbsp;Who are my users?</p>
+          <p class="hand">Mostly engineers, many of them I know personally</p>
         </div>
         <h1 class="dimmed">2 Message</h1>
         <h1 class="dimmed">3 Delivery</h1>
       </div>
+    </div>
+
+    <div class="slide horizontal">
+      <div class="block fill">
+        <h1>0 Context</h1>
+        <div class="space-between">
+          <p>·· &nbsp;Who are my users?</p>
+          <p class="hand">Mostly engineers, many of them I know personally</p>
+        </div>
+        <h1 class="dimmed">1 Message</h1>
+        <h1 class="dimmed">2 Delivery</h1>
+      </div>
+    </div>
+
+    <div class="slide horizontal">
+      <div class="block fill">
+        <h1>0 Context</h1>
+        <div class="space-between">
+          <p>·· &nbsp;Who are my users?</p>
+          <p class="hand">Mostly engineers, many of them I know personally</p>
+        </div>
+        <div class="space-between">
+          <p>·· &nbsp;What's the vibe?</p>
+          <p class="hand">End of working Thursday, we'll be low on energy</p>
+        </div>
+        <div class="space-between">
+          <p>·· &nbsp;What constraints exist?</p>
+          <p class="hand">10 min, offline + online, big screen, low contrast</p>
+        </div>
+        <h1 class="dimmed">1 Message</h1>
+        <h1 class="dimmed">2 Delivery</h1>
+      </div>
+    </div>
+
+    <div class="slide horizontal">
+      <div class="block fill">
+        <h1 class="dimmed">0 Context</h1>
+        <h1>1 Message</h1>
+        <div class="space-between">
+          <p>·· &nbsp;What's the problem?</p>
+          <p class="hand">
+            Preparing presentations is stressful and time-consuming
+          </p>
+        </div>
+        <div class="space-between">
+          <p>·· &nbsp;What can I offer?</p>
+          <p class="hand">
+            A simplified 3-part mental model with guiding questions
+          </p>
+        </div>
+        <div class="space-between">
+          <p>·· &nbsp;Why will it work?</p>
+          <p class="hand">
+            It leverages what engineers already know about products
+          </p>
+        </div>
+        <h1 class="dimmed">2 Delivery</h1>
+      </div>
+    </div>
+
+    <div class="slide horizontal">
+      <div class="block fill">
+        <h1 class="dimmed">0 Context</h1>
+        <h1 class="dimmed">1 Message</h1>
+        <h1>2 Delivery</h1>
+        <div class="space-between">
+          <p>·· &nbsp;How do I package the message?</p>
+          <p class="hand">
+            Very minimalistic slides in a tool very familiar to devs
+          </p>
+        </div>
+        <div class="space-between">
+          <p>·· &nbsp;How do I guide attention?</p>
+          <p class="hand">
+            By giving information bit by bit as a personal story
+          </p>
+        </div>
+        <div class="space-between">
+          <p>·· &nbsp;How do I make it stick?</p>
+          <p class="hand">Repetition and playful meta-demonstration</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <p>What is one thing I want you to remember today?</p>
+      <h1 class="highlight">Build presentations like you build products</h1>
+    </div>
+
+    <div class="slide">
+      <h1 class="highlight">
+        <span class="dimmed">Build</span> slack messages
+        <span class="dimmed">like you build products</span>
+      </h1>
+      <h1 class="highlight">
+        <span class="dimmed">Build</span> task descriptions
+        <span class="dimmed">like you build products</span>
+      </h1>
+      <h1 class="highlight">
+        <span class="dimmed">Build</span> documentation
+        <span class="dimmed">like you build products</span>
+      </h1>
     </div>
   </body>
 </html>
