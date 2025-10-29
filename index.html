@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>presentation about presentations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/geist-mono" rel="stylesheet" />
+    <style>
+      :root {
+        --text: #222;
+        --bg: #fff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        background-color: var(--bg);
+      }
+
+      body {
+        font-family: "Geist Mono", monospace;
+        color: var(--text);
+        overflow-x: hidden;
+        font-size: 20px;
+        position: relative;
+      }
+
+      .slide {
+        width: 100%;
+        padding: 3%;
+        height: 100svh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        scroll-snap-align: start;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      .highlight {
+        font-size: 8cqw;
+        line-height: 0.9;
+        letter-spacing: -0.07em;
+        transform: skewY(4deg);
+        padding: 0.5em 1em 0 1em;
+        margin: 0 -1.25em;
+      }
+
+      .title {
+        font-size: 14.5cqw;
+        line-height: 0.75;
+        letter-spacing: -0.07em;
+        transform: skewY(-9deg);
+      }
+
+      .block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      .space-between {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .horizontal {
+        flex-direction: row;
+      }
+
+      .dimmed {
+        opacity: 0.2;
+      }
+
+      .fill {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide space-between">
+      <h1 class="title">Presentation about making presentations</h1>
+      <p>
+        Nick&nbsp;Mikulin // Manychat&nbsp;Engineering&nbsp;Community //
+        Nov&nbsp;13&nbsp;2025
+      </p>
+    </div>
+
+    <div class="slide">
+      <p>Start by asking a question...</p>
+      <h1>What is one thing I want my audience to remember?</h1>
+    </div>
+
+    <div class="slide">
+      <p>What is one thing I want you to remember?</p>
+      <h1 class="highlight">Build presentations like you build products</h1>
+    </div>
+
+    <div class="slide horizontal">
+      <div class="block fill">
+        <p>Presentation</p>
+        <h1>1 Context</h1>
+        <h1>2 Message</h1>
+        <h1>3 Delivery</h1>
+      </div>
+    </div>
+
+    <div class="slide horizontal">
+      <div class="block fill">
+        <p>Presentation</p>
+        <h1>1 Context</h1>
+        <h1>2 Message</h1>
+        <h1>3 Delivery</h1>
+      </div>
+      <div class="block fill">
+        <p>Product</p>
+        <h1>== Context</h1>
+        <h1>== Logic</h1>
+        <h1>== Interface</h1>
+      </div>
+    </div>
+
+    <div class="slide horizontal">
+      <div class="block fill">
+        <h1>1 Context</h1>
+        <div class="space-between">
+          <p>•• &nbsp;Who is my customer?</p>
+          <p>A tired engineer at the end of working Thursday</p>
+        </div>
+        <div class="space-between">
+          <p>•• &nbsp;What do I sell?</p>
+          <p>A mental model to simplify presentation prep</p>
+        </div>
+        <div class="space-between">
+          <p>•• &nbsp;What limitations exist?</p>
+          <p>10-minute limit, online/offline mixed, etc.</p>
+        </div>
+        <h1 class="dimmed">2 Message</h1>
+        <h1 class="dimmed">3 Delivery</h1>
+      </div>
+    </div>
+  </body>
+</html>
