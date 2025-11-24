@@ -13,7 +13,11 @@
 
     <style>
       :root {
-        --text: #222;
+        --text: #f5f5f5;
+        --bg: #000;
+      }
+      :root[data-theme="light"] {
+        --text: #111;
         --bg: #fff;
       }
 
@@ -106,6 +110,36 @@
 
       .fill {
         flex: 1;
+      }
+
+      .mode-toggle {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(-50%);
+        right: 1rem;
+        gap: 0rem;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 2rem;
+        font-size: 7rem;
+        background: transparent;
+        border: none;
+        color: var(--text);
+        cursor: pointer;
+      }
+      .mode-toggle .sun {
+        opacity: 0.15;
+      }
+      .mode-toggle .moon {
+        opacity: 1;
+      }
+      :root[data-theme="light"] .mode-toggle .sun {
+        opacity: 1;
+        transition: transform 0.3s ease;
+      }
+      :root[data-theme="light"] .mode-toggle .moon {
+        opacity: 0.15;
+        transition: transform 0.3s ease;
       }
 
       h1,
@@ -207,6 +241,15 @@
           <p>·· &nbsp;What are my constraints?</p>
           <p class="hand">10 min, offline + online, big screen, low contrast</p>
         </div>
+        <button
+          class="mode-toggle"
+          id="contrast-toggle"
+          type="button"
+          aria-label="Toggle light/dark"
+        >
+          <span class="sun">●</span>
+          <span class="moon">☾</span>
+        </button>
         <h1 class="dimmed">1 Message</h1>
         <h1 class="dimmed">2 Delivery</h1>
       </div>
@@ -279,5 +322,19 @@
         <span class="dimmed">like you build products</span>
       </h1>
     </div>
+
+    <script>
+      const root = document.documentElement;
+      const toggle = document.getElementById("contrast-toggle");
+      root.dataset.theme = "dark";
+      toggle?.addEventListener("click", () => {
+        const next = root.dataset.theme === "light" ? "dark" : "light";
+        root.dataset.theme = next;
+        toggle.setAttribute(
+          "aria-label",
+          `Switch to ${next === "light" ? "dark" : "light"} mode`
+        );
+      });
+    </script>
   </body>
 </html>
