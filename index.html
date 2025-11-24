@@ -13,8 +13,8 @@
 
     <style>
       :root {
-        --text: #fff;
-        --bg: #222;
+        --text: #222;
+        --bg: #fff;
       }
 
       * {
@@ -36,7 +36,7 @@
         font-style: normal;
         color: var(--text);
         overflow-x: hidden;
-        font-size: 20px;
+        font-size: 24px;
         position: relative;
       }
 
@@ -52,14 +52,19 @@
         scroll-snap-align: start;
         position: relative;
         overflow-x: hidden;
+        overflow: hidden;
+      }
+
+      .no-wrap {
+        flex-wrap: nowrap;
       }
 
       .highlight {
         font-size: 7.5cqw;
         line-height: 0.9;
         letter-spacing: -0.05em;
-        transform: skewY(4deg);
-        padding: 0.5em 1em 0 1em;
+        transform: skewY(-4deg);
+        padding: 0.2em 1em 0.3em 1em;
         margin: 0 -1.25em;
       }
 
@@ -74,7 +79,7 @@
         font-family: "Nanum Pen Script", cursive;
         font-weight: 400;
         font-style: normal;
-        font-size: 2rem;
+        font-size: 2.25rem;
         line-height: 1.5rem;
       }
 
@@ -103,7 +108,6 @@
         flex: 1;
       }
 
-      /* Global bold font weight */
       h1,
       h2,
       h3,
@@ -120,14 +124,17 @@
     <div class="slide space-between">
       <h1 class="title">Presentation about making presentations</h1>
       <p>
-        Nick&nbsp;Mikulin // Manychat&nbsp;Engineering&nbsp;Community //
-        Nov&nbsp;13&nbsp;2025
+        Nick&nbsp;Mikulin · Manychat&nbsp;Engineering&nbsp;Community ·
+        Nov&nbsp;25&nbsp;2025
       </p>
     </div>
 
     <div class="slide">
       <p>Start by asking a question...</p>
-      <h1>What is one thing I want my audience to&nbsp;remember?</h1>
+      <h1 style="max-width: 40ch">
+        What is one thing I want my audience to&nbsp;remember after my
+        presentation?
+      </h1>
     </div>
 
     <div class="slide">
@@ -191,11 +198,13 @@
           <p class="hand">Mostly engineers, many of them I know personally</p>
         </div>
         <div class="space-between">
-          <p>·· &nbsp;What's the vibe?</p>
-          <p class="hand">End of working Thursday, we'll be low on energy</p>
+          <p>·· &nbsp;What's the setting?</p>
+          <p class="hand">
+            End of the day, internal meetup, after 2 tech talks
+          </p>
         </div>
         <div class="space-between">
-          <p>·· &nbsp;What constraints exist?</p>
+          <p>·· &nbsp;What are my constraints?</p>
           <p class="hand">10 min, offline + online, big screen, low contrast</p>
         </div>
         <h1 class="dimmed">1 Message</h1>
@@ -216,13 +225,13 @@
         <div class="space-between">
           <p>·· &nbsp;What can I offer?</p>
           <p class="hand">
-            A simplified 3-part mental model with guiding questions
+            A simplified 3-part framework with guiding questions
           </p>
         </div>
         <div class="space-between">
           <p>·· &nbsp;Why will it work?</p>
           <p class="hand">
-            It leverages what engineers already know about products
+            I will connect it to a familiar topic of product building
           </p>
         </div>
         <h1 class="dimmed">2 Delivery</h1>
@@ -237,14 +246,12 @@
         <div class="space-between">
           <p>·· &nbsp;How do I package the message?</p>
           <p class="hand">
-            Very minimalistic slides in a tool very familiar to devs
+            Minimalistic slides in a tool very familiar to devs
           </p>
         </div>
         <div class="space-between">
           <p>·· &nbsp;How do I guide attention?</p>
-          <p class="hand">
-            By giving information bit by bit as a personal story
-          </p>
+          <p class="hand">Giving information bit by bit as a personal story</p>
         </div>
         <div class="space-between">
           <p>·· &nbsp;How do I make it stick?</p>
@@ -258,7 +265,7 @@
       <h1 class="highlight">Build presentations like you build products</h1>
     </div>
 
-    <div class="slide">
+    <div class="slide no-wrap">
       <h1 class="highlight">
         <span class="dimmed">Build</span> slack messages
         <span class="dimmed">like you build products</span>
