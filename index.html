@@ -83,8 +83,16 @@
         font-family: "Nanum Pen Script", cursive;
         font-weight: 400;
         font-style: normal;
-        font-size: 2rem;
+        font-size: 2.3rem;
+        letter-spacing: -0.015em;
         line-height: 1.5rem;
+      }
+
+      .signature {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding-left: 1rem;
       }
 
       .block {
@@ -161,9 +169,8 @@
   <body>
     <div class="slide space-between">
       <h1 class="title">Presentation about making presentations</h1>
-      <p>
-        Nick&nbsp;Mikulin · Manychat Engineering&nbsp;Community ·
-        Nov&nbsp;25&nbsp;2025
+      <p class="hand signature">
+        Nick Mikulin · Manychat Engineering Community · Nov 25 2025
       </p>
     </div>
 
@@ -350,7 +357,7 @@
         <div class="step fill">
           <h1>Alpha</h1>
           <p>Presented to my wife this weekend</p>
-          <p class="hand" style="margin-top: 0.75rem">
+          <p class="hand" style="margin-top: 3rem">
             My delivery would not be refined without her
           </p>
         </div>
@@ -360,7 +367,7 @@
         <div class="step fill">
           <h1>Beta</h1>
           <p>Presented to Anton and Anna on Monday</p>
-          <p class="hand" style="margin-top: 0.75rem">
+          <p class="hand" style="margin-top: 3rem">
             This slide would not be here without them
           </p>
         </div>
@@ -370,7 +377,7 @@
         <div class="step fill">
           <h1>Launch</h1>
           <p>Presenting to you right now</p>
-          <p class="hand" style="margin-top: 0.75rem">
+          <p class="hand" style="margin-top: 3rem">
             I would not be here without you
           </p>
         </div>
@@ -382,7 +389,7 @@
       <h1 class="highlight">Build presentations like you build products</h1>
     </div>
 
-    <div class="slide no-wrap">
+    <div class="slide no-wrap" style="padding-bottom: 7rem">
       <h1 class="highlight">
         <span class="dimmed">Build</span> Slack messages
         <span class="dimmed">like you build products</span>
@@ -395,6 +402,9 @@
         <span class="dimmed">Build</span> documentation
         <span class="dimmed">like you build products</span>
       </h1>
+      <p class="hand signature">
+        Nick Mikulin · Manychat Engineering Community · Nov 25 2025
+      </p>
     </div>
 
     <script>
